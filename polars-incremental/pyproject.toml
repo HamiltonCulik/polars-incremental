@@ -1,0 +1,21 @@
+[project]
+name = "polars-incremental"
+version = "1.0.0"
+description = "Polars-native incremental ingestion helpers, with checkpointing, schema evolution, CDC helpers, and stateful processing."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "polars>=0.20.0",
+    "deltalake>=0.15.0",
+]
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["polars_incremental*"]
